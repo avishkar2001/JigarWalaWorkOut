@@ -13,7 +13,9 @@ import Error from "./pages/Error";
 import SingleExercise from "./components/SingleExercise"
 import Cardio from "./components/Cardio";
 import Resistance from "./components/Resistance";
-
+import Admin from "./pages/Admin";
+import FAQ from "./pages/FAQ"
+import Merchandise from "./pages/Merchandise"
 
 function App() {
   return (
@@ -28,6 +30,9 @@ function App() {
         <Route path="/exercise/cardio" element={<Cardio />} />
         <Route path="/exercise/resistance" element={<Resistance />} />
         <Route path="*" element={<Error />} />
+        <Route path="/admin" element={<Admin/>} />
+        <Route path="/faq" element={<FAQ/>} />
+        <Route path="/merchandise" element={<Merchandise/>} />
       </Routes>
     </Router >
   );

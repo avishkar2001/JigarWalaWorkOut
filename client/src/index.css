@@ -18,14 +18,14 @@ code {
 
 /* ---------------------------1. header--------------------------------- */
 .heart-icon {
-  height: 24px;
-  margin-right: 3px;
+  height: 26px;
+  margin-right: 7px;
 }
 
 .brand {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .brand-logged {
@@ -60,13 +60,137 @@ code {
   color: var(--main-color);
 }
 
-/* --------------------------------- 2. home page---------------------------------  */
-.homepage {
-  background-image: url("./assets/images/run.jpg");
+.button {
+  padding-right: 20px;
+}
+
+
+/*for our merchandise */
+.card_main_frame {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url("./assets/images/bg3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; /* 100% of the viewport height */
+}
+
+.main_card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* Adjust the gap between cards as needed */
+}
+
+.card {
+  height: 400px;
+  /* Adjust the height of each card as needed */
+  width: 300px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-family: cursive;
+  font-weight: 600;
+  color: rgb(235, 60, 226);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  /* Adjust the height as needed */
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+/* FAQ.css */
+
+.faq-container {
+ 
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url("./assets/images/bg3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.faq-container-main{
+  /* padding-top: 100px;
+  */
+  background-image: url("./assets/images/bg4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.faq-list {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #f9f9f9;
+}
+
+.faq-item.active {
+  background-color: #f9f9f9;
+}
+
+.faq-question {
+  padding: 15px;
+  font-weight: bold;
+}
+
+.faq-answer {
+  padding: 15px;
+  display: none;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* --------------------------------- 2. home page---------------------------------  */
+.homepage {
+  background-image: url("./assets/images/img2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 100vh;
+  /* 100% of the viewport height */
 }
 
 .home {
@@ -107,7 +231,11 @@ code {
 /* 3. --------------------------------- sign up and login page-------------------------------- */
 .signup,
 .history {
+  background-image: url("./assets/images/bg3.jpg");
   height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .signup-form {
@@ -149,14 +277,25 @@ code {
   margin: 30px auto 20px auto;
   font-weight: 900;
 }
+.title_exercise {
+  margin: 30px auto 20px auto;
+  font-weight: 900;
+  color: white;
+}
 
 .title:after {
-  content: ""; /* This is necessary for the pseudo element to work. */
-  display: block; /* This will put the pseudo element on its own line. */
-  margin: 0 auto; /* This will center the border. */
-  width: 35px; /* length of border */
-  padding-top: 3px; /* This creates some space between the element and the border. */
-  border-bottom: 2px solid; /* This creates the border. Replace black with whatever color you want. */
+  content: "";
+  /* This is necessary for the pseudo element to work. */
+  display: block;
+  /* This will put the pseudo element on its own line. */
+  margin: 0 auto;
+  /* This will center the border. */
+  width: 35px;
+  /* length of border */
+  padding-top: 3px;
+  /* This creates some space between the element and the border. */
+  border-bottom: 2px solid;
+  /* This creates the border. Replace black with whatever color you want. */
 }
 
 .history-text {
@@ -235,6 +374,14 @@ code {
   height: 40px;
 }
 
+.exercise {
+  background-image: url("./assets/images/1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 92vh;
+}
+
 .cardio-btn,
 .resistance-btn {
   width: 160px;
@@ -273,7 +420,7 @@ code {
 
 .resistance,
 .single-resistance {
-  background-image: url("./assets/images/dumbell.jpeg");
+  background-image: url("./assets/images/dumbell.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -370,10 +517,11 @@ code {
   font-weight: bold;
 }
 
-.react-confirm-alert-button-group button{
+.react-confirm-alert-button-group button {
   font-weight: bold;
   font-size: 14px;
 }
+
 .react-confirm-alert-button-group button:last-child {
   background-color: red;
 }
