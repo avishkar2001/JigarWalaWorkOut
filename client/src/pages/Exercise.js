@@ -20,7 +20,7 @@ export default function Exercise() {
     <div>
       <Header />
       <div className="exercise d-flex flex-column align-items-center">
-        <h2 className='title'>Add Exercise</h2>
+        <h2 className='title_exercise'>Add Exercise</h2>
         <div>
           <button className='cardio-btn d-flex flex-column  align-items-center justify-content-center' onClick={() => navigate("/exercise/cardio")}>
             <img alt="cardio" src={cardioIcon} className="exercise-icon" />
