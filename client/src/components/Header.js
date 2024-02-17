@@ -12,7 +12,7 @@ export default function Header() {
   const isHomePage = location.pathname === '/';
   const isLoginPage = location.pathname === '/login';
   const isSignupPage = location.pathname === '/signup';
-
+  const isAdminPage = location.pathname === '/admin';
 
   return (
 
@@ -21,7 +21,7 @@ export default function Header() {
         <>
           <Navbar.Brand as={Link} to="/" className="brand brand-logged d-flex align-items-center">
             <img alt="heart" style={{ display: "inline" }} src={heart} className="heart-icon" />
-            FitTrack
+            JigarWala Workout
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
@@ -29,6 +29,7 @@ export default function Header() {
               {/* use eventKey to show navbar style from react bootstrap */}
               <Nav.Link as={Link} to="/exercise" eventKey="1" >Exercise</Nav.Link>
               <Nav.Link as={Link} to="/history" eventKey="2">History</Nav.Link>
+              <Nav.Link as={Link} to="/merchandise" eventKey="3">Our Merchandise</Nav.Link>
               <Nav.Link onClick={Auth.logout} >Logout </Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -36,8 +37,11 @@ export default function Header() {
         (<Navbar.Brand as={Link} to="/" className={`brand brand-new mx-auto d-flex align-items-center
           ${isLoginPage || isSignupPage ? "brand-text" : null}`}>
           <img alt="heart" style={{ display: "inline" }} src={heart} className="heart-icon" />
-          FitTrack
-        </Navbar.Brand>)}
+          JigarWala Workout
+        </Navbar.Brand>)
+      
+      }
+        
     </Navbar >
   );
 }
