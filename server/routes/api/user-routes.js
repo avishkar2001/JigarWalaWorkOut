@@ -15,4 +15,16 @@ router.route("/login").post(login);
 router.route('/me').get(authMiddleware, getSingleUser);
 
 
+
+//
+const UserModel = require('../../models/User'); 
+
+router.get('/getusers', (req, res) => {
+  UserModel.find()
+    .then(users => res.json(users))
+    .catch(error => res.json(error));
+});
+
+//
+
 module.exports = router;
