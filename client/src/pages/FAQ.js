@@ -22,7 +22,7 @@ const FAQ = () => {
     {
       question: "How can I track my History?",
       answer:
-        "The 'Progress' section provides visual representations of your workout data over time. You can track your progress in terms of duration, intensity, and more."
+        "The 'History' section provides visual representations of your workout data over time. You can track your progress in terms of duration, intensity, and more."
     },
     {
       question: "Is there a feature to set workout goals?",

@@ -64,6 +64,50 @@ code {
   padding-right: 20px;
 }
 
+/*Admin Page*/
+.admin-login {
+  background-image: url("./assets/images/bg3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.admin-login-btn {
+  color: darkblue;
+}
+
+/* AdminDashboard.css */
+
+.admin-dashboard {
+  padding: 20px;
+}
+
+.admin-actions {
+  margin-bottom: 20px;
+}
+
+.admin-users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-users-table th,
+.admin-users-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.admin-users-table th {
+  background-color: #f2f2f2;
+}
+
+.admin-users-table button {
+  margin-right: 5px;
+}
+
 
 /*for our merchandise */
 .card_main_frame {
@@ -80,12 +124,11 @@ code {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  /* Adjust the gap between cards as needed */
+
 }
 
-.card {
+.card1 {
   height: 400px;
-  /* Adjust the height of each card as needed */
   width: 300px;
   margin: 20px;
   overflow: hidden;
@@ -98,12 +141,13 @@ code {
   transform: scale(1.05);
 }
 
+/* 
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
-}
+} */
 
 .card-body {
   padding: 15px;
@@ -116,20 +160,22 @@ code {
 }
 
 .card-img-top {
-  width: 100%;
-  height: 200px;
-  /* Adjust the height as needed */
+
+  height: 340px;
   object-fit: cover;
+
 }
 
 .card-body {
   text-align: center;
 }
 
+
+
 /* FAQ.css */
 
 .faq-container {
- 
+
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -138,7 +184,8 @@ code {
   background-position: center;
   background-repeat: no-repeat;
 }
-.faq-container-main{
+
+.faq-container-main {
   /* padding-top: 100px;
   */
   background-image: url("./assets/images/bg4.jpg");
@@ -277,6 +324,7 @@ code {
   margin: 30px auto 20px auto;
   font-weight: 900;
 }
+
 .title_exercise {
   margin: 30px auto 20px auto;
   font-weight: 900;

@@ -112,10 +112,10 @@ export default function Signup() {
         {showAlert && <div className="err-message">Signup failed</div>}
 
 {/* --------------------admin link-------------------- */}
-        <p className="link-btn">
+        {/* <p className="link-btn">
           You are Admin ?{' '}
           <Link to="/admin">Admin Log in</Link>
-        </p>
+        </p> */}
       </form>
     </div>
   );
