@@ -65,7 +65,7 @@ code {
 }
 
 /*Admin Page*/
-.admin-login {
+/* .admin-login {
   background-image: url("./assets/images/bg3.jpg");
   background-size: cover;
   background-position: center;
@@ -75,11 +75,11 @@ code {
 
 .admin-login-btn {
   color: darkblue;
-}
+} */
 
 /* AdminDashboard.css */
 
-.admin-dashboard {
+/* .admin-dashboard {
   padding: 20px;
 }
 
@@ -107,12 +107,12 @@ code {
 .admin-users-table button {
   margin-right: 5px;
 }
-
+ */
 
 /*for our merchandise */
 .card_main_frame {
   display: flex;
-  flex-wrap: wrap;
+   /* flex-wrap: wrap;  */
   justify-content: center;
   background-image: url("./assets/images/bg3.jpg");
   background-size: cover;
@@ -123,7 +123,8 @@ code {
 .main_card {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
+  margin-left: 50px;
 
 }
 
@@ -137,7 +138,7 @@ code {
   transition: transform 0.2s ease-in-out;
 }
 
-.card:hover {
+.card1:hover {
   transform: scale(1.05);
 }
 
@@ -423,11 +424,12 @@ code {
 }
 
 .exercise {
+  height: 90.7vh;
   background-image: url("./assets/images/1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 92vh;
+ 
 }
 
 .cardio-btn,
@@ -458,21 +460,23 @@ code {
 
 .cardio,
 .single-cardio {
+  height: 100.5vh;
   background-image: url("./assets/images/running.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+ 
   color: white;
 }
 
 .resistance,
 .single-resistance {
+  height: 109vh;
   background-image: url("./assets/images/dumbell.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+ 
   color: white;
 }
 

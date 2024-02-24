@@ -1,11 +1,11 @@
 
 import React, { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
-import { loginUser } from "../utils/API";
+import { Link,  useNavigate } from "react-router-dom";
 import Auth from "../utils/auth";
 import Header from "../components/Header";
 
 export default function Admin() {
+    const navigate = useNavigate();
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [showAlert, setShowAlert] = useState(false);
 
@@ -56,16 +56,14 @@ export default function Admin() {
 
   // If the user is logged in, redirect to the home page
   if (loggedIn) {
-    return <Navigate to="/getusers" />;
+    // return <Navigate to="/admindashboard" />;
+    return navigate('/admindashboard');
   }
 
   return (
-    <div className="admin-login d-flex flex-column align-items-center justify-content-center text-center">
-      <Header />
-      <form
-        onSubmit={handleFormSubmit}
-        className="admin-login-form d-flex flex-column"
-      >
+    <div className="signup d-flex flex-column align-items-center justify-content-center text-center">
+     
+      <form onSubmit={handleFormSubmit} className="signup-form d-flex flex-column">
         {/* --------------------email-------------------- */}
         <label htmlFor="email">Admin Email</label>
         <input
@@ -90,12 +88,13 @@ export default function Admin() {
 
         {/* --------------------login btn-------------------- */}
         <div className="btn-div">
-          <button
+            <button className="btn btn-primary" type="submit">Login</button>
+          {/* <button
             disabled={!(formState.email && formState.password)}
-            className="admin-login-btn mx-auto my-auto"
+            className="signup-btn mx-auto my-auto"
           >
             Admin Login
-          </button>
+          </button> */}
         </div>
         {/* --------------------error message-------------------- */}
         {showAlert && <div className="err-message">Admin login failed</div>}
