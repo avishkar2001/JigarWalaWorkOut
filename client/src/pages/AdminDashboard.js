@@ -8,7 +8,7 @@
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:3001/getusers");
+//         const response = await axios.get("http://localhost:8080/getusers");
 //         console.log(response);
 //         if (response.status === 200) {
 //           setAllData(response.data);
@@ -67,7 +67,7 @@
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:3001/getusers");
+//         const response = await axios.get("http://localhost:8080/getusers");
 //         console.log(response);
 //         if (response.status === 200) {
 //           setAllData(response.data);

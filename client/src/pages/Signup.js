@@ -88,12 +88,16 @@ export default function Signup() {
           throw new Error("something went wrong!");
         }
 
+        else {
+          window.location.href = "/signup"
+        }
         // get token and user data from the server
         const { token } = await response.json();
 
         // use authentication functionality
-        Auth.login(token);
+        // Auth.login(token);
         alert("Signup successful!");
+        window.location.href = "/login"
       } catch (err) {
         console.error(err);
         alert("Signup failed. Please check your credentials.");
