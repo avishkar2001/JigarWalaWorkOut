@@ -1,13 +1,25 @@
+
+
 const express = require("express");
 const path = require("path");
 const routes = require("./routes");
 const db = require("./config/connection");
+const cors = require('cors');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 const app = express();
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true })); 
 app.use(express.json()); 
+
+ 
+// app.use(cors());
+// app.use(cors({
+//   origin: 'http://localhost:3000',
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true,
+// }));
+
 
 // Serve up static assets 
 if (process.env.NODE_ENV === "production") {

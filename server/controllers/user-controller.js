@@ -19,15 +19,40 @@ module.exports = {
   },
 
   // create a user, sign a token, and send it back to sign up page
-  async createUser({ body }, res) {
-    const user = await User.create(body);
+  async createUser({ body }, res, req) {
 
-    if (!user) {
-      return res.status(400).json({ message: "Something is wrong!" });
+    try {
+      const user = await User.create(body);
+      // await newUser.save();
+      res.status(201).json({ message: 'User created successfully' });
+      // const token = signToken(user);
+      // res.json({ token, user });
+
+    } catch (error) {
+      if (error.name === 'ValidationError') {
+        // Handle validation errors
+        const errors = {};
+        for (const field in error.errors) {
+          errors[field] = error.errors[field].message;
+        }
+        res.status(400).json({ errors });
+      } else {
+        // Handle other types of errors
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
+      }
     }
-    const token = signToken(user);
-    res.json({ token, user });
+
+    // const user = await User.create(body);
+
+    // if (!user) {
+    //   return res.status(400).json({ message: "Something is wrong!" });
+    // }
+    // const token = signToken(user);
+    // res.json({ token, user });
   },
+
+
 
   // login a user, sign a token, and send it back to login page
   async login({ body }, res) {

@@ -16,6 +16,8 @@ router.route('/me').get(authMiddleware, getSingleUser);
 
 
 
+
+
 //
 const UserModel = require('../../models/User'); 
 
